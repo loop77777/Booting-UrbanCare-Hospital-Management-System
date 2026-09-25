@@ -1,6 +1,6 @@
-package com.hospital.model;
+package com.hospital.repository;
 
-
+import com.hospital.model.Patient;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;

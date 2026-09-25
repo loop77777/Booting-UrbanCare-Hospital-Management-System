@@ -10,21 +10,25 @@ hospital/
 ├── hospital.iml
 ├── .gitignore
 ├── src/
-│   ├── HospitalManagementApp.java
 │   └── com/
 │       └── hospital/
+│           ├── main/
+│           │   └── HospitalManagementApp.java
 │           ├── model/
 │           │   ├── Appointment.java
 │           │   ├── AppointmentStatus.java
 │           │   ├── BloodGroup.java
 │           │   ├── ConsultingRoom.java
 │           │   ├── Doctor.java
-│           │   ├── HospitalDirectory.java
 │           │   ├── Nurse.java
 │           │   ├── Patient.java
 │           │   └── Person.java
-│           └── service/
-│               └── BillingService.java
+│           ├── repository/
+│           │   └── HospitalDirectory.java
+│           ├── service/
+│           │   └── BillingService.java
+│           └── controller/
+│               └── HospitalController.java
 └── out/
 ```
 
@@ -79,18 +83,18 @@ The project was adjusted to ensure it works correctly and remains simple:
 
 ## How to Run
 
-From the project root, run:
+From the project root, compile all Java files and run the application using its package-qualified class name:
 
 ```bash
 javac -d out $(find src -name "*.java")
-java -cp out HospitalManagementApp
+java -cp out com.hospital.main.HospitalManagementApp
 ```
 
 On Windows PowerShell, you can use:
 
 ```powershell
 javac -d out (Get-ChildItem -Recurse -Filter *.java -Path .\src).FullName
-java -cp .\out HospitalManagementApp
+java -cp .\out com.hospital.main.HospitalManagementApp
 ```
 
 ## Notes
