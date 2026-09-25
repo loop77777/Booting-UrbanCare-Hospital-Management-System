@@ -1,4 +1,4 @@
-package com.hospital.main;
+
 
 import com.hospital.model.*;
 import com.hospital.repository.HospitalDirectory;
